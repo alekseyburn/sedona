@@ -6,9 +6,6 @@
 </head>
 <body>
   <header class="main-header">
-    <a class="main-header-logo">
-      <img src="img/logo.png" alt="Логотип Sedona" width="138" height="70">
-    </a>
     <nav class="main-navigation">
       <ul class="site-navigation">
         <li><a href="#">Информация</a></li>
@@ -17,23 +14,27 @@
         <li><a href="#">Гостинницы</a></li>
       </ul>
     </nav>
+    <a class="main-header-logo">
+      <img src="img/logo.png" alt="Логотип Sedona" width="138" height="70">
+    </a>
   </header>
 
   <main>
-
     <h1 class="visually-hidden">Городок Седона</h1>
+
     <section class="promo">
-      <img src="img/Welcome-full.png" alt="Welcome to the georgeous Sedona" width="458" height="352">
+      <img src="img/Welcome-full.png" alt="Welcome to the gorgeous Sedona" width="458" height="352">
     </section>
 
-    <section class="features">
+    <article class="features">
       <h2 class="features-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="features-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ul class="features-list">
-        <li class="features-item">
+        <li class="features-item features-item-big">
           <h3>Настоящий городок</h3>
           <span>— №1 —</span>
           <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+          <img src="img/bg-feature1.jpg" alt="Изображение городка Седона" width="800" height="256">
           <ul class="usage-list">
             <li class="usage-item">
               <h3 class="usage-title">Жильё</h3>
@@ -49,7 +50,7 @@
             </li>
           </ul>
         </li>
-        <li class="features-item">
+        <li class="features-item features-item-big-invert">
           <h3>Там есть Мост Дьявола</h3>
           <span>— №2 —</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -70,20 +71,41 @@
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ul>
-    </section>
+    </article>
 
     <section class="find-hotel">
       <h2 class="visually-hidden">Поиск гостинницы в Седоне</h2>
       <b>Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a href="#" class="btn find-btn">Поиск гостиницы в Седоне</a>
+      <form action="#" method="post" class="search-form">
+        <p>
+          <label>Дата заезда: <input type="text" class="date-field" name="arrival-date" placeholder="24 апреля 2017"></label>
+        </p>
+        <p>
+          <label>Дата выезда: <input type="text" class="date-field" name="departure-day" placeholder="4 июля 2017"></label>
+        </p>
+        <p class="amount">
+          <label for="adults-amount">Взрослые: </label>
+          <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
+          <input type="text" class="person-amount" id="adults-amount" placeholder="2">
+          <button type="button" class="count-btn count-btn-plus" aria-label="больше">+</button>
+        </p>
+        <p class="amount">
+          <label for="child-amount">Взрослые: </label>
+          <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
+          <input type="text" class="person-amount" id="child-amount" placeholder="0">
+          <button type="button" class="count-btn-plus" aria-label="больше">+</button>
+        </p>
+        <button type="submit" class="find-btn">Найти</button>
+      </form>
       <img src="img/map.jpg" alt="Месторасположение города Седона" width="1200" height="593">
     </section>
 
   </main>
 
   <footer class="main-footer">
-    <span class="footer-hashtag">#VisitSedona</span>
+    <a href="#" class="footer-hashtag">#VisitSedona</a>
     <ul class="social-list">
       <li class="social-item"><a href="#">Twitter</a></li>
       <li class="social-item"><a href="#">Facebook</a></li>
