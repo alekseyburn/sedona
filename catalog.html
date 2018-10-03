@@ -11,7 +11,7 @@
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и Видео</a></li>
         <li><a href="#">Карта Штата</a></li>
-        <li><a href="#">Гостинницы</a></li>
+        <li class="current"><a href="#">Гостинницы</a></li>
       </ul>
     </nav>
     <a class="main-header-logo">
@@ -23,7 +23,7 @@
 
     <section class="filters">
       <h2 class="visually-hidden">Фильтр гостинниц</h2>
-      <form action="#" method="get" class="filter">
+      <form action="https://echo.htmlacademy.ru" method="get" class="filter">
         <fieldset>
           <legend>Инфраструктура: </legend>
           <ul class="filter-list">
@@ -58,7 +58,80 @@
             </li>
           </ul>
         </fieldset>
+          <fieldset class="filter-range">
+            <legend class="filter-range-title">Стоимость в сутки (р): </legend>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">от <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-search" type="submit">Показать</button>
+        </fieldset>
       </form>
+    </section>
+    <section class="sort">
+      <h2 class="visually-hidden">Каталог гостинниц</h2>
+      <p>Найдено: 3</p>
+      <p>Сортировка:</p>
+      <ul class="sort-list">
+        <li class="sort-item sort-item-current"><a href="#">По цене</a></li>
+        <li class="sort-item"><a href="#">По типу</a></li>
+        <li class="sort-item"><a href="#">По рейтингу</a></li>
+      </ul>
+      <ul class="sort-arrows">
+        <li class="sort-arrows sort-arrows-up"><a href="#"></a></li>
+        <li class="sort-arrows sort-arrows-down"><a href="#"></a></li>
+      </ul>
+    </section>
+
+    <section class="catalog">
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <h3>Amara Resort & Spa</h3>
+          <p>Гостиница</p>
+          <p>От 4000 Р.</p>
+          <a href="#">Подробнее</a>
+          <a href="#">Забронировать</a>
+          <div class="stars">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+          </div>
+          <p class="rating">Рейтинг: 8,5</p>
+        </li>
+        <li class="catalog-item">
+          <h3>Desert Quail Inn</h3>
+          <p>Мотель</p>
+          <p>От 3000 Р.</p>
+          <a href="#">Подробнее</a>
+          <a href="#">Забронировать</a>
+          <div class="stars">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+          </div>
+          <p class="rating">Рейтинг: 8,9</p>
+        </li>
+        <li class="catalog-item">
+          <h3>Villas At Poco Diablo</h3>
+          <p>Апартаменты</p>
+          <p>От 2000 Р.</p>
+          <a href="#">Подробнее</a>
+          <a href="#">Забронировать</a>
+          <div class="stars">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+            <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+          </div>
+          <p class="rating">Рейтинг: 9,2</p>
+        </li>
+      </ul>
     </section>
   </main>
 
@@ -73,6 +146,6 @@
       <span>Website by </span><a href="#" class="social-logo"><img src="img/html-academy.svg" alt="Html Academy" width="115" height="41"></a>
     </div>
   </footer>
-
+<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
