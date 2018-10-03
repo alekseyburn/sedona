@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Sedona</title>
 </head>
 <body>
   <header class="main-header">
@@ -23,7 +23,7 @@
     <h1 class="visually-hidden">Городок Седона</h1>
 
     <section class="promo">
-      <img src="img/Welcome-full.png" alt="Welcome to the gorgeous Sedona" width="458" height="352">
+      <img src="img/Welcome-full.png" alt="Добро пожаловать в Седону!" width="458" height="352">
     </section>
 
     <article class="features">
@@ -54,6 +54,7 @@
           <h3>Там есть Мост Дьявола</h3>
           <span>— №2 —</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <img src="img/bg-feature2.jpg" alt="Изображение Моста Дьявола" width="800" height="256">
         </li>
         <li class="features-item">
           <h3>Небольшая площадь</h3>
@@ -75,26 +76,26 @@
 
     <section class="find-hotel">
       <h2 class="visually-hidden">Поиск гостинницы в Седоне</h2>
-      <b>Заинтересовались?</b>
+      <h3>Заинтересовались?</h3>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a href="#" class="btn find-btn">Поиск гостиницы в Седоне</a>
       <form action="#" method="post" class="search-form">
         <p>
-          <label>Дата заезда: <input type="text" class="date-field" name="arrival-date" placeholder="24 апреля 2017"></label>
+          <label>Дата заезда: <input type="text" class="date-field" name="arrival-date" placeholder="ДД ММ ГГГГ" value="24 Апреля 2017"></label>
         </p>
         <p>
-          <label>Дата выезда: <input type="text" class="date-field" name="departure-day" placeholder="4 июля 2017"></label>
+          <label>Дата выезда: <input type="text" class="date-field" name="departure-date" placeholder="ДД ММ ГГГГ" value="4 июля 2017"></label>
         </p>
         <p class="amount">
           <label for="adults-amount">Взрослые: </label>
           <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
-          <input type="text" class="person-amount" id="adults-amount" placeholder="2">
+          <input type="text" class="person-amount" id="adults-amount" value="2">
           <button type="button" class="count-btn count-btn-plus" aria-label="больше">+</button>
         </p>
         <p class="amount">
           <label for="child-amount">Взрослые: </label>
           <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
-          <input type="text" class="person-amount" id="child-amount" placeholder="0">
+          <input type="text" class="person-amount" id="child-amount" value="0">
           <button type="button" class="count-btn-plus" aria-label="больше">+</button>
         </p>
         <button type="submit" class="find-btn">Найти</button>
