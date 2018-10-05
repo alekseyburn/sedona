@@ -235,3 +235,25 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 }
+
+.filters legend {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.filters label {
+  color: #ffffff;
+}
+
+.filter-range input {
+  font: inherit;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.btn-search {
+  border: none;
+  color: #ffffff;
+background-color: transparent;
+}
