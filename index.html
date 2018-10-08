@@ -90,31 +90,33 @@
         <h3>Заинтересовались?</h3>
         <p class="find-form-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a href="#" class="find-btn">Поиск гостиницы в Седоне</a>
-        <div class="modal">
-          <form action="https://echo.htmlacademy.ru" method="post" class="search-form clearfix">
-            <p class="form-item clearfix">
+          <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
+            <div class="form-item">
               <label for="arrival-id">Дата заезда:</label>
               <input type="text" class="date-field" name="arrival-date" id="arrival-id" placeholder="ДД ММ ГГГГ" value="24 Апреля 2017">
-            </p>
-            <p class="form-item clearfix">
+            </div>
+            <div class="form-item">
               <label for="departure-id">Дата выезда:</label>
                 <input type="text" class="date-field" name="departure-date" id="departure-id" placeholder="ДД ММ ГГГГ" value="4 июля 2017">
-            </p>
-            <p class=" form-item amount clearfix">
+            </div>
+            <div class=" form-item amount">
               <label for="adults-amount">Взрослые:</label>
-              <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
+              <div class="amount-wrapper">
+              <button type="button" class="count-btn count-btn-minus" aria-label="меньше"></button>
               <input type="text" class="person-amount" id="adults-amount" value="2">
-              <button type="button" class="count-btn count-btn-plus" aria-label="больше">+</button>
-            </p>
-            <p class=" form-item amount clearfix">
-              <label for="child-amount">Дети:</label>
-              <button type="button" class="count-btn count-btn-minus" aria-label="меньше">-</button>
+              <button type="button" class="count-btn count-btn-plus" aria-label="больше"></button>
+              </div>
+            </div>
+            <div class=" form-item amount">
+              <label class="child-label" for="child-amount">Дети:</label>
+              <div class="amount-wrapper">
+              <button type="button" class="count-btn count-btn-minus" aria-label="меньше"></button>
               <input type="text" class="person-amount" id="child-amount" value="0">
-              <button type="button" class="count-btn-plus" aria-label="больше">+</button>
-            </p>
+              <button type="button" class="count-btn count-btn-plus" aria-label="больше"></button>
+              </div>
+            </div>
             <button type="submit" class="search-btn">Найти</button>
           </form>
-        </div>
         <img src="img/map.jpg" alt="Месторасположение города Седона" width="1200" height="593">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592836.0159339766!2d-112.20238528754179!3d34.8314132853423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1538917683428" width="1200" height="593"></iframe>
       </section>
