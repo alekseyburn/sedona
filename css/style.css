@@ -1,7 +1,7 @@
 html,
 body {
   min-width: 1200px;
-  min-height: 2762px;
+  min-height: 933px;
 }
 
 body {
@@ -22,6 +22,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -141,7 +146,9 @@ input[type="radio"].visually-hidden {
   background-attachment: fixed;
 }
 
-.promo img {
+.promo .promo-logo {
+  width: 458px;
+  margin: 0 auto;
   padding-top: 76px;
   padding-bottom: 17px;
 }
@@ -392,6 +399,14 @@ input[type="radio"].visually-hidden {
   background-color: rgba(254, 254, 254, 0.9);
 }
 
+.footer-wrapper-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 120px;
+
+  background-color: rgba(254, 254, 254, 0.9);
+}
 .main-footer p {
   display: flex;
   justify-content: center;
@@ -652,10 +667,7 @@ input[type="radio"].visually-hidden {
 /*filters*/
 
 .filter {
-  display: flex;
-  justify-content: space-between;
-  padding: 27px 72px;
-  padding-bottom: 9px;
+  padding: 27px 72px 31px 72px;
 
   background-color: #396184;
   background-image: url("../img/bg-hotels.jpg");
@@ -666,7 +678,21 @@ input[type="radio"].visually-hidden {
 .filters fieldset {
   margin: 0;
   padding: 0;
+
   border: none;
+}
+
+.checklist {
+  float: left;
+}
+
+.checklist:first-child {
+  margin-right: 116px;
+}
+
+.filter-range {
+  float: right;
+  width: 318px;
 }
 
 .filters ul {
@@ -682,11 +708,16 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .filter-item {
-  margin-bottom: 24px;
-  padding-left: 39px;
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+
+.filter-item:last-child {
+  margin: 0;
 }
 
 .filter-item label {
@@ -702,8 +733,8 @@ input[type="radio"].visually-hidden {
 .filter-input + label::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -39px;
+  top: -1px;
+  left: -40px;
 
   width: 23px;
   height: 23px;
@@ -716,8 +747,8 @@ input[type="radio"].visually-hidden {
 .filter-input:checked + label::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -39px;
+  top: -1px;
+  left: -40px;
 
   width: 27px;
   height: 23px;
@@ -744,14 +775,7 @@ input[type="radio"].visually-hidden {
 
 .filter-range input {
   font: inherit;
-  color: #ffffff;
-
-  background-color: transparent;
-}
-
-.filter-range {
-  width: 318px;
-
+  line-height: 21px;
   color: #ffffff;
 }
 
@@ -762,11 +786,10 @@ input[type="radio"].visually-hidden {
 .price-controls {
   position: relative;
 
-  height: 32px;
+  width: 314px;
   margin-bottom: 20px;
 
   font-size: 0;
-  text-align: center;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -787,9 +810,11 @@ input[type="radio"].visually-hidden {
 
 .price-controls label {
   display: inline-block;
+  padding: 5px 0 4px 0;
 
   font-size: 14px;
-  line-height: 30px;
+  line-height: 21px;
+  vertical-align: middle;
 
   cursor: pointer;
 }
@@ -797,12 +822,15 @@ input[type="radio"].visually-hidden {
 .price-controls .min-price,
 .price-controls .max-price {
   box-sizing: border-box;
-  width: 157px;
-  padding-left: 44px;
+  width: 50%;
+}
+
+.price-controls .min-price {
+  padding-left: 65px;
 }
 
 .price-controls .max-price {
-  padding-right: 18px;
+  padding-left: 55px;
 }
 
 .price-controls input {
@@ -815,7 +843,7 @@ input[type="radio"].visually-hidden {
 .range-controls {
   position: relative;
 
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 
 .range-controls .scale {
@@ -841,8 +869,18 @@ input[type="radio"].visually-hidden {
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.3);
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  top: -10px;
+
+  width: 4.5px;
+  height: 4.5px;
+
+  background-color: #1c4f80;
+  border: 9px solid #ffffff;
 }
 
 .range-toggle-min {
@@ -853,14 +891,10 @@ input[type="radio"].visually-hidden {
   left: 80%;
 }
 
-.range-toggle:hover {
-  background-color: #1c4f80;
-}
-
 .btn-search {
   display: block;
   margin: 0 auto;
-  padding: 5px 34px;
+  padding: 5px 34px 5px 34px;
 
   font: inherit;
   color: #ffffff;
@@ -880,30 +914,46 @@ input[type="radio"].visually-hidden {
 
 /*filter end*/
 
+/*sort*/
+
+.sort {
+  padding: 30px 72px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .sort h3 {
+  float: left;
+  margin: 0;
+  margin-right: 48px;
+
   font-size: 21px;
   line-height: 26px;
   color: #000000;
 }
 
-.sort-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.sort-arrows-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .sort p {
+  display: inline;
+  float: left;
+  margin: 0;
+  margin-right: 39px;
+  padding-top: 6px;
+
   font-size: 12px;
   line-height: 18px;
   color: #000000;
+}
+
+.sort-list {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 239px;
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+
+  list-style: none;
 }
 
 .sort-item a {
@@ -935,6 +985,24 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.sort-arrows-list {
+  display: flex;
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sort-arrows-item {
+  padding-top: 5px;
+  padding-right: 13px;
+}
+
+.sort-arrows-item:last-child {
+  padding-right: 0;
+}
+
 .sort-arrows-item svg path {
   fill: #cacaca;
 }
@@ -952,18 +1020,70 @@ input[type="radio"].visually-hidden {
   fill: #81b3d2;
 }
 
+/*sort end*/
+/*catalog*/
+
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.catalog-item {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding: 25px 72px 16px 72px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-item .catalog-item-image {
+  width: 135px;
+  margin-top: 5px;
+  margin-right: 30px;
+
+  line-height: 0;
+}
+
+.catalog-item-description {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 365px;
+}
+
 .catalog-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  letter-spacing: 0.2px;
+}
+
+.catalog-item p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.catalog-item-description .catalog-item-type,
+.catalog-item-description .btn-more {
+  min-width: 110px;
+  margin-right: 6px;
+}
+
+.catalog-item-description .catalog-item-price,
+.catalog-item-description .btn-booking {
+  min-width: 142px;
 }
 
 .catalog-title:hover,
@@ -976,8 +1096,10 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
+  box-sizing: border-box;
+  padding: 3px 16px 3px 16px;
+
   font-weight: 700;
-  vertical-align: middle;
   text-align: center;
   color: #ffffff;
 }
@@ -1012,6 +1134,36 @@ input[type="radio"].visually-hidden {
   background-color: #503e33;
 }
 
-.rating {
+.hotel-rating {
+  margin-left: auto;
+}
+
+.hotel-rating .stars {
+  display: block;
+  height: 17px;
+  margin: 3px 0 47px auto;
+
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.amara-stars {
+  width: 89px;
+}
+
+.desert-stars {
+  width: 65px;
+}
+
+.villas-stars {
+  width: 41px;
+}
+
+.hotel-rating .rating {
+  display: block;
+  padding: 4px 12px 3px 16px;
+
   color: #666666;
+
+  background-color: #f2f2f2;
 }
