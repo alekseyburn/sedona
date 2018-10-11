@@ -501,6 +501,10 @@ input[type="radio"].visually-hidden {
   transform: translateX(-50%);
 }
 
+.search-form-show {
+display: none;
+}
+
 .form-item {
   position: relative;
 
