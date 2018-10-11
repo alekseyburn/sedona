@@ -69,14 +69,15 @@ input[type="radio"].visually-hidden {
 
 .main-header {
   position: relative;
-
-  background-color: #ffffff;
 }
 
 .main-header-logo {
   position: absolute;
   top: 0;
   left: 50%;
+
+  width: 138px;
+  height: 70px;
 
   transform: translateX(-50%);
 }
@@ -99,6 +100,8 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 240px;
   padding: 14px 0 16px;
+
+  word-wrap: break-word;
 }
 
 .site-navigation li:nth-child(4n+2) {
@@ -137,9 +140,7 @@ input[type="radio"].visually-hidden {
   max-height: 508px;
   margin-bottom: 60px;
 
-  text-align: center;
-
-  background-color: #92735f;
+  background-color: #cfddeb;
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -148,9 +149,10 @@ input[type="radio"].visually-hidden {
 
 .promo .promo-logo {
   width: 458px;
+  height: 352px;
   margin: 0 auto;
   padding-top: 76px;
-  padding-bottom: 17px;
+  padding-bottom: 22px;
 }
 
 /*promo end*/
@@ -160,15 +162,15 @@ input[type="radio"].visually-hidden {
   margin-bottom: 50px;
 
   text-align: center;
+  word-wrap: break-word;
 }
 
 .features-title {
   width: 576px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 27px;
 
   font-weight: 700;
-  font-size: 21px;
   line-height: 26px;
   color: #000000;
 }
@@ -213,9 +215,8 @@ input[type="radio"].visually-hidden {
 
 .features-item h3 {
   width: 151px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 24px;
 
-  font-weight: 700;
   font-size: 21px;
   color: #000000;
 }
@@ -288,7 +289,7 @@ input[type="radio"].visually-hidden {
 }
 
 .usage-list .usage-title {
-  margin-top: 161px;
+  padding-top: 161px;
 
   color: #000000;
 }
@@ -306,11 +307,10 @@ input[type="radio"].visually-hidden {
 .find-hotel {
   position: relative;
 }
+
 .find-hotel h3 {
-  margin: 0;
   margin-bottom: 24px;
 
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -318,30 +318,26 @@ input[type="radio"].visually-hidden {
 }
 
 .find-hotel .find-form-text {
-  margin: 0;
   margin-bottom: 47px;
 
   line-height: 24px;
   text-align: center;
 }
-
+/*ВОПРОС про длинные слова в кнопке*/
 .find-btn {
   display: block;
   box-sizing: border-box;
   width: 568px;
   margin: 0 auto;
-  padding: 30px 139px 30px;
+  padding: 30px 0;
 
-  font: inherit;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  vertical-align: middle;
   text-align: center;
   color: #ffffff;
 
   background-color: #766357;
-  border: none;
 }
 
 .find-btn:hover,
@@ -356,7 +352,9 @@ input[type="radio"].visually-hidden {
 }
 
 .map {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 2;
 
   display: block;
@@ -366,14 +364,13 @@ input[type="radio"].visually-hidden {
   border: 0;
 }
 
-.find-hotel img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.find-hotel .map-image {
   z-index: 1;
 
   width: 1200px;
   height: 593px;
+  margin: 0;
+  padding: 0;
 }
 
 /*find-hotel end*/
@@ -407,6 +404,7 @@ input[type="radio"].visually-hidden {
 
   background-color: rgba(254, 254, 254, 0.9);
 }
+
 .main-footer p {
   display: flex;
   justify-content: center;
@@ -414,13 +412,14 @@ input[type="radio"].visually-hidden {
   width: 400px;
   margin: 0;
   padding: 0;
-
-  text-align: center;
 }
 
 .main-footer .footer-hashtag {
+  overflow: hidden;
+
   font-weight: 700;
   font-size: 21px;
+  text-align: center;
   color: #000000;
 }
 
@@ -487,13 +486,15 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 241px;
   left: 50%;
-  z-index: 3;
+  z-index: 4;
 
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 568px;
   padding: 55px;
+
+  word-wrap: break-word;
 
   background-color: #ffffff;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
@@ -513,9 +514,9 @@ input[type="radio"].visually-hidden {
   padding-top: 6px;
 
   font-weight: 700;
-  font-size: 14px;
   line-height: 26px;
   color: #000000;
+  letter-spacing: 0.2px;
 }
 
 .date-field {
@@ -550,7 +551,7 @@ input[type="radio"].visually-hidden {
 }
 
 .amount {
-  width: 50%;
+  width: 226px;
 }
 
 .person-amount {
@@ -562,9 +563,10 @@ input[type="radio"].visually-hidden {
 .amount-wrapper {
   display: flex;
 }
-
-.child-label {
-  padding-left: 51px;
+/*ВОПРОС про выравнивание полей в форме*/
+.child-amount {
+  padding-right: 26px;
+  padding-left: 53px;
 }
 
 .count-btn {
@@ -672,7 +674,8 @@ input[type="radio"].visually-hidden {
   background-color: #396184;
   background-image: url("../img/bg-hotels.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 16%;
+  background-position: 50% 0;
+  background-attachment: fixed;
 }
 
 .filters fieldset {
@@ -686,22 +689,26 @@ input[type="radio"].visually-hidden {
   float: left;
 }
 
-.checklist:first-child {
+.filter .checklist {
   margin-right: 116px;
+}
+
+.checklist:nth-child(3n) {
+  margin-right: 0;
 }
 
 .filter-range {
   float: right;
-  width: 318px;
+  /*width: 318px;*/
 }
 
-.filters ul {
+.filter-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
-
+/*ВОПРОС про переполнение поля*/
 .filters legend {
   margin-bottom: 25px;
 
@@ -767,6 +774,10 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 }
 
+.filter-input:focus + label {
+  outline: 2px solid black;
+}
+
 .filters label {
   color: #ffffff;
 }
@@ -774,7 +785,6 @@ input[type="radio"].visually-hidden {
 /*range filter !!!CHECK!!!*/
 
 .filter-range input {
-  font: inherit;
   line-height: 21px;
   color: #ffffff;
 }
@@ -876,8 +886,8 @@ input[type="radio"].visually-hidden {
 .range-toggle:hover {
   top: -10px;
 
-  width: 4.5px;
-  height: 4.5px;
+  width: 4px;
+  height: 4px;
 
   background-color: #1c4f80;
   border: 9px solid #ffffff;
@@ -893,12 +903,14 @@ input[type="radio"].visually-hidden {
 
 .btn-search {
   display: block;
+  max-width: 318px;
   margin: 0 auto;
   padding: 5px 34px 5px 34px;
 
   font: inherit;
   color: #ffffff;
   text-transform: uppercase;
+  word-wrap: break-word;
 
   background-color: transparent;
   border: 2px solid #ffffff;
@@ -913,7 +925,6 @@ input[type="radio"].visually-hidden {
 }
 
 /*filter end*/
-
 /*sort*/
 
 .sort {
@@ -921,7 +932,7 @@ input[type="radio"].visually-hidden {
 
   border-bottom: 1px solid #e5e5e5;
 }
-
+/*ВОПРОС про вариант разметки блока*/
 .sort h3 {
   float: left;
   margin: 0;
@@ -933,7 +944,6 @@ input[type="radio"].visually-hidden {
 }
 
 .sort p {
-  display: inline;
   float: left;
   margin: 0;
   margin-right: 39px;
@@ -943,12 +953,10 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: #000000;
 }
-
+/*ВОПРОС про невидимый внешний отступ при отключении флоата*/
 .sort-list {
-  display: flex;
-  justify-content: space-between;
   float: left;
-  width: 239px;
+  max-width: 670px;
   margin: 0;
   padding: 0;
   padding-top: 4px;
@@ -956,12 +964,17 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.sort-item {
+  float: left;
+  margin-right: 33px;
+}
+
 .sort-item a {
   font-size: 12px;
   line-height: 18px;
   color: #000000;
 
-  border-bottom: 1px dotted #000000;
+  border-bottom: 1px dotted #81b3d2;
   opacity: 0.3;
 }
 
@@ -1003,25 +1016,29 @@ input[type="radio"].visually-hidden {
   padding-right: 0;
 }
 
-.sort-arrows-item svg path {
+.sort-arrows-item path {
   fill: #cacaca;
 }
 
-.sort-arrows-item svg path:hover,
-.sort-arrows-item svg path:focus {
+.sort-arrows-item path:hover,
+.sort-arrows-item path:focus {
   fill: #000000;
 }
 
-.sort-arrows-item svg path:active {
+.sort-arrows-item path:active {
   fill: #81b3d2;
 }
 
-.sort-arrows-current svg path {
+.sort-arrows-current path {
   fill: #81b3d2;
 }
 
 /*sort end*/
 /*catalog*/
+
+.catalog {
+  word-wrap: break-word;
+}
 
 .catalog-list {
   display: flex;
@@ -1036,7 +1053,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 0;
   padding: 25px 72px 16px 72px;
 
   border-bottom: 1px solid #e5e5e5;
@@ -1044,6 +1060,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-item .catalog-item-image {
   width: 135px;
+  height: 90px;
   margin-top: 5px;
   margin-right: 30px;
 
@@ -1158,7 +1175,7 @@ input[type="radio"].visually-hidden {
 .villas-stars {
   width: 41px;
 }
-
+/*ВОПРОС про переполнение*/
 .hotel-rating .rating {
   display: block;
   padding: 4px 12px 3px 16px;
