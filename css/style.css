@@ -435,7 +435,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 120px;
+  /*min-height: 120px;*/
+  padding: 22px 0;
 
   background-color: rgba(254, 254, 254, 0.9);
 
@@ -449,7 +450,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 120px;
+  padding: 22px 0;
 
   background-color: rgba(254, 254, 254, 0.9);
 
@@ -612,7 +613,7 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 458px;
   margin-bottom: 29px;
 
   -webkit-box-pack: justify;
@@ -620,12 +621,18 @@ input[type="radio"].visually-hidden {
 }
 
 .form-item label {
+  width: 111px;
   padding-top: 6px;
+  padding-bottom: 6px;
 
   font-weight: 700;
   line-height: 26px;
   color: #000000;
   letter-spacing: 0.2px;
+}
+
+.form-item:nth-child(3) label {
+  width: 112px;
 }
 
 .date-field {
@@ -661,24 +668,28 @@ input[type="radio"].visually-hidden {
 }
 
 .amount {
-  width: 226px;
+  width: 229px;
 }
 
 .person-amount {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 38px;
-  padding: 6px 15px;
+
+  text-align: center;
 }
 
 .amount-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: auto;
 }
+
 /*ВОПРОС про выравнивание полей в форме*/
-.child-amount {
-  padding-right: 26px;
+
+.amount .child-amount {
+  width: 62px;
   padding-left: 53px;
 }
 
@@ -697,7 +708,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 52%;
 
   width: 12px;
   height: 3px;
